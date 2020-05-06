@@ -1,2 +1,9 @@
 $minwidth: 320px;
-$fontfamily: Roboto;
+$fontfamily: Lato;
+
+@mixin Lato($fw: 400, $fsl: normal, $fsz:18px) {
+    font-family: Lato;
+    font-style: $fsl;
+font-weight: $fw;
+font-size: $fsz;
+}
