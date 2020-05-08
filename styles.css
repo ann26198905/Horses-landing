@@ -99,12 +99,13 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   font-size: 0;
   flex: 1 0 100%;
+  margin-top: 80px;
 }
 
 .logo {
-  opacity: 0.5;
-  max-width: 94px;
-  max-height: 85px;
+  opacity: 0.3;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .title {
@@ -152,25 +153,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .flex66 {
-  flex: 1 1 66.6666%;
+  flex: 0 0 66.6666%;
 }
 
 .flex33 {
-  flex: 1 1 33.3333%;
+  flex: 0 0 33.3333%;
 }
 
 .header {
-  position: absolute;
   width: 100%;
+  position: fixed;
   z-index: 50;
+  top: 0;
+  left: 0;
 }
-.header__pos {
-  margin-top: 35px;
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e9cda8;
 }
 .header__row {
   justify-content: center;
   align-items: center;
   height: 85px;
+}
+.header__menu-body {
+  position: relative;
+  z-index: 200;
 }
 .header__menu-li {
   margin-right: 70px;
@@ -187,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__menu-logo {
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 25%;
   transform: translate3d(-50%, 0, 0);
 }
 .header__menu-link {
@@ -203,15 +216,33 @@ h1, h2, h3, h4, h5, h6 {
   color: #353536;
   border-bottom: 1px dotted #1e1d29;
 }
-@media (max-width: 740px) {
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header__menu {
+    position: relative;
+    z-index: 100;
+    overflow: auto;
+  }
+
+  .lock {
+    overflow: hidden;
+  }
+
   .header__menu-body {
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 0;
+    top: -1000%;
     left: 0;
     background-color: #353536;
+    overflow: hidden;
+    z-index: 50;
   }
+
   .header__menu-list {
     flex-direction: column;
     justify-content: center;
@@ -220,6 +251,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 1000;
   }
+
   .header__menu-li {
     margin: 0 0 35px 0;
   }
@@ -229,6 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   .header__menu-li:last-child {
     margin: 0;
   }
+
   .header__menu-link {
     color: #fff;
     font-size: 20px;
@@ -236,51 +269,57 @@ h1, h2, h3, h4, h5, h6 {
   .header__menu-link:hover {
     background-color: #000;
   }
+
   .header__menu-logo {
-    opacity: 1;
-    position: fixed;
-    z-index: 100;
-    margin-top: 35px;
+    display: none;
   }
-  .header .menu-icon {
+
+  .menu-icon {
     display: block;
-    position: absolute;
-    top: 15px;
+    position: fixed;
+    top: 35px;
     right: 50px;
     width: 30px;
     height: 18px;
     cursor: pointer;
-    z-index: 5;
+    z-index: 5000;
   }
-  .header .menu-icon span {
-    transition: all 0.3s ease 0s;
-    top: 8px;
+  .menu-icon__span {
+    transition: all 0.15s ease 0s;
+    top: 7px;
     left: 0;
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3.5px;
     background-color: #fff;
+    box-shadow: 0px 2px 24px 2px rgba(0, 0, 0, 0.33);
+    border: 0.1px solid #1e1d29;
   }
-  .header .menu-icon span:first-child {
+  .menu-icon__span:first-child {
     top: 0;
   }
-  .header .menu-icon span:last-child {
+  .menu-icon__span:last-child {
     top: auto;
     bottom: 0;
   }
-  .header .active span {
+
+  .active {
     transform: scale(0);
   }
-  .header .active span:first-child {
+  .active:first-child {
     transform: rotate(-45deg);
-    top: -8px;
+    top: 7px;
   }
-  .header .active span:last-child {
+  .active:last-child {
     transform: rotate(45deg);
-    bottom: -8px;
+    bottom: 7px;
+  }
+
+  .active2 {
+    top: 0;
+    transition: all 0.3s ease 0s;
   }
 }
-
 .block-text__flex {
   display: flex;
   flex-direction: column;
@@ -298,7 +337,66 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 70px;
   margin-bottom: 100px;
 }
+.block-text__text--small {
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: justifyLeft;
+}
 
 .block1 {
-  width: 100%;
+  flex: 0 0 1600px;
+}
+.block1__photo {
+  max-width: 100%;
+}
+.block-text-photo__img {
+  max-width: 100%;
+}
+
+.block2 {
+  flex: 0 0 1600px;
+}
+.block2__photo {
+  max-width: 100%;
+}
+.block3 {
+  flex: 0 0 1600px;
+}
+.block3__photo {
+  max-width: 100%;
+}
+.block3__photo2 {
+  max-width: 100%;
+}
+
+.slider {
+  max-width: 1600px;
+}
+
+.block4 {
+  flex: 0 0 1600px;
+}
+.block4__photo1 {
+  max-width: 100%;
+}
+.block4__photo2 {
+  max-width: 100%;
+}
+.block4__photo3 {
+  max-width: 100%;
+}
+.block4__photo4 {
+  max-width: 100%;
+}
+.block4__photo5 {
+  max-width: 100%;
+}
+.block4__photo6 {
+  max-width: 100%;
+}
+.block4__photo7 {
+  max-width: 100%;
+}
+.block4__photo8 {
+  max-width: 100%;
 }

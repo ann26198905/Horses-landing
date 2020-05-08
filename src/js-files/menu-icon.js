@@ -1,7 +1,9 @@
 // $('.wrapper').addClass('loaded');
-
+$(document).ready(function() {
 $('.js-menu').click(function(event) {
-    $(this).toggleClass('active');
-    $('.js-menu-body').toggleClass('active');
-    $('.body').toggleClass('lock');
+    $('.menu-icon__span').toggleClass('active');
+    $('.js-menu-body').toggleClass('active2');
+    $('body').toggleClass('lock');
+});
+
 });
