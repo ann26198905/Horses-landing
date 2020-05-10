@@ -9,79 +9,104 @@ html(lang="en")
         title Layout Landing Horses
     body
         .wrapper
-            main.page.flex-column
+            main.page
                 include header.pug
                 .main-screen 
                 .content
-                    section.block-text
+                    section.generation
                         .container
-                            .block-text__flex
-                                img.block-text__logo.logo(src="src/img/icon.png")
-                                .block-text__title.title A NEW GENERATION OF thoroughbred horses
-                                .block-text__text.text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    section.block1.flex
-                        .block1__photo-icon.flex66
-                            img.block1__photo.icon__rel-pos(src="src/img/middle.jpg")
-                            img.block1__icon.icon__abs-pos(src="src/img/logo5.png")
-                        .block-text-photo.flex33.flex-column
-                            .block-text
-                                .block-text__flex
-                                    img.block-text__logo.logo(src="src/img/icon2.png")
-                                    .block-text__title.title vintage Oliva
-                                    .block-text__text.text.block-text__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
-                            .block-text-photo__photo
-                                img.block-text-photo__img(src="src/img/middle2.jpg")
-                    section.block2.flex
-                        .block-text-photo.flex33.flex-column
-                            .block-text
-                                .block-text__flex
-                                    img.block-text__logo.logo(src="src/img/icon3.png")
-                                    .block-text__title.title La Boriosa
-                                    .block-text__text.text.block-text__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
-                            .block-text-photo__photo
-                                img.block-text-photo__img(src="src/img/middle3.jpg")
-                        .block2__photo-icon.flex66
-                            img.block2__photo.icon__rel-pos(src="src/img/middle4.jpg")
-                            img.block2__icon.icon__abs-pos(src="src/img/logo5.png")
-                    section.block3.flex
-                        .block3__photo-icon.flex33
-                            img.block3__photo.icon__rel-pos(src="src/img/middle5.jpg")
-                            img.block3__icon.icon__abs-pos(src="src/img/logo4.png")
-                        .block-text-photo.flex-column.flex33
-                            .block-text
-                                .block-text__flex
-                                    img.block-text__logo.logo(src="src/img/icon4.png")
-                                    .block-text__title.title retrò Bike - M. Hulot
-                                    .block-text__text.text.block-text__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
-                            .block-text-photo__photo
-                                img.block-text-photo__img(src="src/img/middle7.jpg")
-                        .block3__img.flex33
-                            img.block3__photo2(src="src/img/middle6.jpg")
+                            .block
+                                .block__icon
+                                    img(src="src/img/icon.png")
+                                .block__title A NEW GENERATION OF thoroughbred horses
+                                .block__text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    section.block3parts
+                        .block3parts__row
+                            .block3parts__column.block3parts__column--b
+                                a.block3parts__item.item(href="#")
+                                    span.item__logo
+                                        img.item__logo-img(src="src/img/logo5.png")
+                                    span.item__image
+                                        img.item__image-img(src="src/img/middle.jpg")
+                            .block3parts__column
+                                .block3parts__content.block
+                                    .block__icon
+                                        img(src="src/img/icon2.png")
+                                    .block__title vintage Oliva
+                                    .block__text.block__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
+                                .block3parts__img-block
+                                    img.block3parts__img(src="src/img/middle2.jpg")
+                    section.block3parts
+                        .block3parts__row
+                            .block3parts__column
+                                .block3parts__content.block
+                                    .block__icon
+                                        img(src="src/img/icon3.png")
+                                    .block__title La Boriosa
+                                    .block__text.block__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
+                                .block3parts__img-block
+                                    img.block3parts__img(src="src/img/middle3.jpg")
+                            .block3parts__column.block3parts__column--b
+                                a.block3parts__item.item(href="#")
+                                    span.item__logo
+                                        img.item__logo-img(src="src/img/logo5.png")
+                                    span.item__image
+                                        img.item__image-img(src="src/img/middle4.jpg")
+                    section.block3parts
+                        .block3parts__row
+                            .block3parts__column
+                                a.block3parts__item.item(href="#")
+                                    span.item__logo
+                                        img.item__logo-img(src="src/img/logo5.png")
+                                    span.item__image
+                                        img.item__image-img(src="src/img/middle5.jpg")
+                            .block3parts__column
+                                .block3parts__content.block
+                                    .block__icon
+                                        img(src="src/img/icon4.png")
+                                    .block__title retrò Bike - M. Hulot
+                                    .block__text.block__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
+                                .block3parts__img-block
+                                    img.block3parts__img(src="src/img/middle7.jpg")
+                            .block3parts__column
+                                a.block3parts__item.item(href="#")
+                                    span.item__logo
+                                        img.item__logo-img(src="src/img/logo5.png")
+                                    span.item__image
+                                        img.item__image-img(src="src/img/middle6.jpg")
                     section.slider
-                        .block-text__flex
-                            img.block-text__logo.logo(src="src/img/icon5.png")
-                            span.block-text__title.title AOD New York  @aod 
-                            span.block-text__title.title.italic /  35 min
-                            .block-text__text.text.italic Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
-                    section.block4.flex
-                        .block4__photo-block1.flex-column.flex33
-                            .block4__photo-photos.flex
-                                img.block4__photo1(src="src/img/middle8.jpg")
-                                img.block4__photo2(src="src/img/middle9.jpg")
-                            img.block4__photo3(src="src/img/middle10.jpg")
-                        .block4__photo-block2.flex.flex33
-                            img.block4__photo4(src="src/img/middle11.jpg")
-                            img.block4__photo5(src="src/img/h1.jpg")
-                        .block4__photo-block3.flex-column.flex33
-                            .block4__photo-icon
-                                img.block4__photo6(src="src/img/h2.jpg")
-                                img.block4__icon.icon__abs-pos(src="src/img/logo5.png")
-                            .block4__photo-photos.flex
-                                img.block4__photo7(src="src/img/h3.jpg")
-                                img.block4__photo8(src="src/img/h4.jpg")
+                        .block
+                            .block__icon
+                                img(src="src/img/icon5.png")
+                            .block__title AOD New York  @aod 
+                            .block__title.italic /  35 min
+                            .block__text.italic Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                    section.block3parts
+                        .block3parts__row
+                            .block3parts__column
+                                .block3parts__row
+                                    .block3parts__img-block
+                                        img.block3parts__img(src="src/img/middle8.jpg")
+                                    .block3parts__img-block
+                                        img.block3parts__img(src="src/img/middle10.jpg")
+                                .block3parts__img-block
+                                    img.block3parts__img(src="src/img/middle9.jpg")    
+                            .block3parts__column.block3parts__column--s
+                                .block3parts__img-block
+                                    img.block3parts__img(src="src/img/middle11.jpg")
+                            .block3parts__column.block3parts__column--s
+                                .block3parts__img-block
+                                    img.block3parts__img(src="src/img/h1.jpg")
+                            .block3parts__column
+                                .block3parts__img-block
+                                    img.block3parts__img(src="src/img/h2.jpg")  
+                                .block3parts__row
+                                    .block3parts__img-block
+                                        img.block3parts__img(src="src/img/h3.jpg")
+                                    .block3parts__img-block
+                                        img.block3parts__img(src="src/img/h4.jpg") 
                     section.block5
-                        .container
-                            button.block5__btn discover the shop
+                        button.block5__btn discover the shop
                     section.block6
                         .container
                             img.block6__logo.logo(src="src/img/logo3.png")
