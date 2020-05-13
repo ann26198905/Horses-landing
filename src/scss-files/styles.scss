@@ -29,6 +29,12 @@
     flex: 1 0 100%;
     margin-top: 80px;
     position: relative;
+    &__bg{
+    position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;}
 }
 .logo {
     opacity: 0.3;
@@ -240,10 +246,10 @@
     &__text--b {
         @include Lato($fsz: 24px);
         line-height: 1.557;
-    }
-    
-      
-          
+        @media (max-width:899px) {
+            font-size: 20px;
+        }  
+    }      
     &__text--small {
         text-align: justify;
         font-size: 16px;
@@ -274,8 +280,86 @@
 }
 }
 }
+.item {
+    display: block;
+    position: relative;
 
+    &__logo {
+        // display: block;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        opacity: 0;
+        background-color: rgba(100, 194, 158, 0.5);
+      
+    }
+    &__logo-img{max-width: 20%;
+    max-height: 20%;}
+    &:hover {
+        .item__logo {  
+        visibility: visible;  
+        opacity: .5; 
+        }
+    }    
+
+    &__image {
+        // display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__span {
+        @include Lato($fsz:14px,$fw:700);
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        margin-top: 10px;
+    }
+@media (max-width:1100px){
+    height: auto;
+    padding-bottom: 70%;
+}
+}
+// .ibg{
+
+//     background-position: center;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     position: relative;
+//     }
+// .ibg img{
+    
+//     width: 0;
+//     height: 0;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     opacity: 0;
+//     visibility: hidden;
+//     }
+.ibg{
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+ img{
+    display: none;
+    }
+}
+    
+        
 .block3parts {
+    &__item{height: 100%;}
     &__row{display: flex;}
     &__column{
         flex: 0 1 33.333%;
@@ -285,6 +369,7 @@
     &__column--s{
         flex: 0 1 16.667% 
     }
+    
     &__content {
         &::after{
             display: block;
@@ -313,6 +398,7 @@
         background-color: white;
     }      
     }
+    // 2 варианта работы: активное или закомментированное
     &__img-block {
         // height: 100%;
         padding-bottom: 70%;
@@ -321,6 +407,8 @@
     //    max-width: 100%;
     //     max-height: 100%;
     }
+&__block{height: 100%;}
+
     @media (max-width: 1100px){
         &__row{
             flex-direction: column;
@@ -334,78 +422,46 @@
     }
 }
     }
+.block-shop {
+&__row{display: flex;}
+&__column {
+    flex: 0 1 50%;
+}
 
-.ibg{
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    }
-    
-    .ibg img{
-    
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    }
-
-.item {
-    display: block;
-    position: relative;
-    height: 100%;
-    &__logo {
-        visibility: hidden;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        opacity: 0;
-        background-color: rgba(100, 194, 158, 0.5);
-      
-    }
-    &__logo-img{max-width: 20%;
-    max-height: 20%;}
-    &:hover {
-        .item__logo {  
-        visibility: visible;  
-        opacity: .5; 
-        }
-    }    
-
-    &__image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-@media (max-width:1100px){
+&__item {
     height: auto;
-    padding-bottom: 70%;
+    padding-bottom: 50%;
+}
+
+&__item--l {
+    padding-bottom: 100%;
+}
+
+&__item--b {
+    padding-bottom: 200.5%;
 }
 }
 
-.slider {
-background-color: #f7f7f7;
-    &__item {padding: 120px 0 60px 0;}
-
+.block-media{
+    &__row{display: flex;}
+    @media (max-width:1100px){
+        &__row{flex-wrap: wrap;      
+    }
+    &__column {
+        flex: 0 1 50%;
+    
+    &:first-child{flex: 1 1 100%;}
+    &:last-child{flex: 1 1 100%;}
+    }
 }
+}
+
 
 
 .italic {
     font-style: italic;
 }
-
+@import "./slider";
 
 .block4 {
     flex: 0 0 1600px;

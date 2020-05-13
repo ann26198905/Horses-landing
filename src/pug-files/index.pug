@@ -2,36 +2,32 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0  maximum-scale=1.0")
         
         link(rel="stylesheet", href="src/slick/slick/slick.css")
-        //- link(rel="stylesheet", href="src/slick/slick/slick-theme.css" type="text/css")
         link(rel="stylesheet", href="styles.css")
 
         script(src="/src/js-files/jquery-3.5.0.min.js")
-        //- script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
-
         script(src="src/slick/slick/slick.min.js")
         
         script(src="/src/js-files/menu-icon.js")
         script(src="/src/js-files/ibg.js")
         script(src="/src/js-files/slick.js")
 
-        
-
         title Layout Landing Horses
     body
         .wrapper
+            include header.pug
             main.page
-                include header.pug
-                .main-screen.ibg
-                    img.item__image-img(src="src/img/main.jpg")
+                .main-screen
+                    .main-screen__bg.ibg
+                        img(src="src/img/main.jpg" alt="main")
                 .content
                     section.generation
                         .container
                             .block
                                 .block__icon
-                                    img(src="src/img/icon.png")
+                                    img(src="src/img/icon.png" alt="icon")
                                 .block__title A NEW GENERATION OF thoroughbred horses
                                 .block__text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     section.block3parts
@@ -39,115 +35,145 @@ html(lang="en")
                             .block3parts__column.block3parts__column--b
                                 a.block3parts__item.item(href="#")
                                     span.item__logo
-                                        img.item__logo-img(src="src/img/logo5.png")
+                                        img.item__logo-img(src="src/img/logo5.png" alt="logo")
                                     span.item__image.ibg
-                                        img.item__image-img(src="src/img/middle.jpg")
+                                        img(src="src/img/middle.jpg" alt="image")
                             .block3parts__column
                                 .block3parts__content.block
                                     .block__icon
-                                        img(src="src/img/icon2.png")
+                                        img(src="src/img/icon2.png" alt="icon")
                                     .block__title vintage Oliva
                                     .block__text.block__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
                                 .block3parts__img-block.ibg
-                                    img.block3parts__img(src="src/img/middle2.jpg")
+                                    img.block3parts__img(src="src/img/middle2.jpg" alt="image")
                     section.block3parts.block3parts_rev
                         .block3parts__row
                             .block3parts__column
                                 .block3parts__content.block
                                     .block__icon
-                                        img(src="src/img/icon3.png")
+                                        img(src="src/img/icon3.png" alt="icon")
                                     .block__title La Boriosa
                                     .block__text.block__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
                                 .block3parts__img-block.ibg
-                                    img.block3parts__img(src="src/img/middle3.jpg")
+                                    img.block3parts__img(src="src/img/middle3.jpg" alt="image")
                             .block3parts__column.block3parts__column--b
                                 a.block3parts__item.item(href="#")
                                     span.item__logo
-                                        img.item__logo-img(src="src/img/logo5.png")
+                                        img.item__logo-img(src="src/img/logo5.png" alt="logo")
                                     span.item__image.ibg
-                                        img.item__image-img(src="src/img/middle4.jpg")
+                                        img(src="src/img/middle4.jpg" alt="image")
                     section.block3parts
                         .block3parts__row
                             .block3parts__column
                                 a.block3parts__item.item(href="#")
                                     span.item__logo
-                                        img.item__logo-img(src="src/img/logo5.png")
+                                        img.item__logo-img(src="src/img/logo5.png" alt="logo")
                                     span.item__image.ibg
-                                        img.item__image-img(src="src/img/middle5.jpg")
+                                        img(src="src/img/middle5.jpg" alt="image")
                             .block3parts__column
                                 .block3parts__content.block
                                     .block__icon
-                                        img(src="src/img/icon4.png")
+                                        img(src="src/img/icon4.png" alt="icon")
                                     .block__title retrò Bike - M. Hulot
                                     .block__text.block__text--small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.
                                 .block3parts__img-block.ibg
-                                    img.block3parts__img(src="src/img/middle7.jpg")
+                                    img.block3parts__img(src="src/img/middle7.jpg" alt="image")
                             .block3parts__column
                                 a.block3parts__item.item(href="#")
                                     span.item__logo
-                                        img.item__logo-img(src="src/img/logo5.png")
+                                        img.item__logo-img(src="src/img/logo5.png" alt="logo")
                                     span.item__image.ibg
-                                        img.item__image-img(src="src/img/middle6.jpg")
+                                        img(src="src/img/middle6.jpg" alt="image")
                     section.slider
                         .container
                             .js-slider
                                 .slider__item.block
                                     .block__icon.block__icon--m
-                                        img(src="src/img/icon5.png")
+                                        img(src="src/img/icon5.png" alt="icon")
                                     .block__title AOD Vashington  @aod <span class="block__text italic"> /  40 min</span>
                                     .block__text.block__text--b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vintage.
                                 .slider__item.block
                                     .block__icon.block__icon--m
-                                        img(src="src/img/icon5.png")
+                                        img(src="src/img/icon5.png" alt="icon")
                                     .block__title AOD New York  @aod <span class="block__text italic"> /  35 min</span>
-                                    .block__text.italic Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                                    .block__text.block__text--b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
                                 .slider__item.block
                                     .block__icon.block__icon--m
-                                        img(src="src/img/icon5.png")
+                                        img(src="src/img/icon5.png" alt="icon")
                                     .block__title AOD Moscow  @aod <span class="block__text italic"> /  50 min</span>
-                                    .block__text.italic Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor.
-                    section.block3parts
-                        .block3parts__row
-                            .block3parts__column
-                                .block3parts__row
-                                    a.block3parts__item.item(href="#")
+                                    .block__text.block__text--b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    section.block3parts.block-media
+                        .block-media__row
+                            .block-media__column.block3parts__column
+                                .block3parts__block.block-shop
+                                    .block-shop__row
+                                        .block-shop__column
+                                            a.block-shop__item.block-shop__item--l.item(href="#")
+                                                span.item__logo
+                                                    img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                                    span.item__span Shop now
+                                                span.item__image.ibg
+                                                    img(src="src/img/middle8.jpg" alt="image")
+                                        .block-shop__column
+                                            a.block-shop__item.block-shop__item--l.item(href="#")
+                                                span.item__logo
+                                                    img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                                    span.item__span Shop now
+                                                span.item__image.ibg
+                                                    img(src="src/img/middle10.jpg" alt="image")
+                                    a.block-shop__item.item(href="#")
+                                        span.item__logo
+                                            img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                            span.item__span Shop now
                                         span.item__image.ibg
-                                            img.item__image-img(src="src/img/middle8.jpg")
-                                    a.block3parts__item.item(href="#")
-                                        span.item__image.ibg
-                                            img.item__image-img(src="src/img/middle10.jpg")
-                                a.block3parts__item.item(href="#")
-                                        span.item__image.ibg
-                                            img.item__image-img(src="src/img/middle9.jpg")    
-                            .block3parts__column.block3parts__column--s
-                                a.block3parts__item.item(href="#")
+                                            img(src="src/img/middle9.jpg" alt="image")    
+                            .block-media__column.block3parts__column.block3parts__column--s
+                                a.block-shop__item.block-shop__item--b.item(href="#")
+                                    span.item__logo
+                                        img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                        span.item__span Shop now
                                     span.item__image.ibg
-                                        img.item__image-img(src="src/img/middle11.jpg")
-                            .block3parts__column.block3parts__column--s
-                                a.block3parts__item.item(href="#")
+                                        img(src="src/img/middle11.jpg" alt="image")
+                            .block-media__column.block3parts__column.block3parts__column--s
+                                a.block-shop__item.block-shop__item--b.item(href="#")
+                                    span.item__logo
+                                        img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                        span.item__span Shop now
                                     span.item__image.ibg
-                                        img.item__image-img(src="src/img/h1.jpg")
-                            .block3parts__column
-                                a.block3parts__item.item(href="#")
-                                    span.item__image.ibg
-                                        img.item__image-img(src="src/img/h2.jpg")  
-                                .block3parts__row
-                                    a.block3parts__item.item(href="#")
+                                        img(src="src/img/h1.jpg" alt="image")
+                            .block-media__column.block3parts__column
+                                .block3parts__block.block-shop
+                                    a.block-shop__item.item(href="#")
+                                        span.item__logo
+                                            img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                            span.item__span Shop now
                                         span.item__image.ibg
-                                            img.item__image-img(src="src/img/h3.jpg")
-                                    a.block3parts__item.item(href="#")
-                                        span.item__image.ibg
-                                            img.item__image-img(src="src/img/h4.jpg") 
+                                            img(src="src/img/h2.jpg" alt="image")  
+                                    .block-shop__row
+                                        .block-shop__column
+                                            a.block-shop__item.block-shop__item--l.item(href="#")
+                                                span.item__logo
+                                                    img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                                    span.item__span Shop now
+                                                span.item__image.ibg
+                                                    img(src="src/img/h3.jpg" alt="image")
+                                        .block-shop__column
+                                            a.block-shop__item.block-shop__item--l.item(href="#")
+                                                span.item__logo
+                                                    img.item__logo-img(src="src/img/logo5.png" alt="logo")
+                                                    span.item__span Shop now
+                                                span.item__image.ibg
+                                                    img(src="src/img/h4.jpg" alt="image") 
                     section.block5
                         button.block5__btn discover the shop
                     section.block6
                         .container
-                            img.block6__logo.logo(src="src/img/logo3.png")
+                            img.block6__logo.logo(src="src/img/logo3.png" alt="logo")
                             p.block__text.italic Stay on the saddle!
                             form.block6__form#form(action="" method="get")
                                 input.block6__input(type="email" placeholder="enter your email")
                                 input.block6__submit(type="submit" value="GO")
-                    include footer.pug
+            include footer.pug
 
                         
             
